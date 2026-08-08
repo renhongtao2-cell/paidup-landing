@@ -77,11 +77,15 @@
   <div class="pill">🚀 Private beta · 20 spots · founding price locked</div>
   <h1>Stop chasing clients.<br><em>Get paid on time</em> — automatically.</h1>
   <p class="sub">PaidUp is the only tool that politely chases your late invoices, calculates late fees, and follows up across email + SMS — so you never lose money (or the relationship) again.</p>
-  <form class="form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+  <form class="form" action="https://formsubmit.co/renhongtao2@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="New PaidUp beta signup" />
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_template" value="table" />
+    <input type="hidden" name="_next" value="https://renhongtao2-cell.github.io/paidup-landing/?joined=1" />
     <input type="email" name="email" placeholder="you@freelance.com" required />
     <button type="submit">Get early access</button>
   </form>
-  <div class="micro">No card. 2-minute setup. Connect Stripe / PayPal / Wave — no migration.</div>
+  <div class="micro">No card. 2-minute setup. Or just email <a href="mailto:renhongtao2@gmail.com?subject=PaidUp beta signup">renhongtao2@gmail.com</a>.</div>
 </section>
 
 <section class="stats wrap">
@@ -115,7 +119,11 @@
   <div class="cta" id="join">
     <h2>Join the private beta</h2>
     <p>20 founding freelancers get lifetime access at the locked founding price. Help shape the product — and never chase a payment manually again.</p>
-    <form class="form" style="max-width:480px;margin:0 auto" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+    <form class="form" style="max-width:480px;margin:0 auto" action="https://formsubmit.co/renhongtao2@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New PaidUp beta signup" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_next" value="https://renhongtao2-cell.github.io/paidup-landing/?joined=1" />
       <input type="email" name="email" placeholder="you@freelance.com" required />
       <button type="submit">Claim my spot</button>
     </form>
@@ -137,5 +145,14 @@
   PaidUp · Private beta 2026 · Built for freelancers who'd rather be working than chasing.
 </footer>
 
+<script>
+  if (location.search.includes('joined=1')) {
+    var bar = document.createElement('div');
+    bar.style.cssText = 'position:fixed;top:0;left:0;width:100%;background:#16a34a;color:#fff;text-align:center;padding:14px 20px;font-weight:600;z-index:9999;box-shadow:0 2px 8px rgba(0,0,0,.12);';
+    bar.innerHTML = "✓ You're on the beta list — check your inbox for confirmation.";
+    document.body.appendChild(bar);
+    setTimeout(function(){ bar.style.opacity='0'; bar.style.transition='opacity .5s'; setTimeout(function(){bar.remove();},500); }, 4500);
+  }
+</script>
 </body>
 </html>
